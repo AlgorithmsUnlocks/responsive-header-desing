@@ -1,0 +1,115 @@
+/* Responsive Header Style One */
+.header-style {
+   margin: 150px 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none!important;
+    border: 0;
+    text-transform: capitalize;
+    
+}
+
+:root{
+    --blue:#00b8b8;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg:#eee;
+    --border:.2rem solid rgba(0,0,0,.1);
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+ 
+*::-webkit-scrollbar{
+    height: .2rem;
+    width: 0.7rem;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+ }
+
+header {
+   box-shadow: var(--box-shadow);
+   padding: 2rem 0;
+   background-color: white;
+}
+header.active{
+   box-shadow: var(--box-shadow);
+   border: 0;
+}
+header .logo{
+   font-size: 1.5rem;
+   color: var(--black);
+}
+header .logo span{
+   color: var(--blue);   
+}
+header .navbar a{
+   margin: 0 0.8rem;
+   font-size: 1.1rem;
+   color: var(--black)
+}
+header .navbar a:hover{
+   color: var(--blue);
+   transition: all 0.5s ease;
+}
+header .link-btn{
+   background-color: var(--blue);
+   padding: 0.5rem 2rem;
+   color: white;
+   border-radius: 0.5rem;
+}
+header #menu-btn{
+   color: var(--black);
+   font-size: 1.5rem;
+   display: none;
+}
+@media screen and (max-width: 992px) {
+   header .link-btn{
+      display: none;
+   }
+   header .navbar a{
+      margin: 0 0.5rem;
+   }
+}
+@media screen and (max-width: 768px) {
+   header #menu-btn{
+      display: inline-block;
+   }
+   header .navbar{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      background-color: #00b8b8;
+      right: 0;
+      flex-direction: column;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+   }
+   header .navbar a{
+      padding: 0.5rem 0;
+
+   }
+   header #menu-btn.fa-xmark{
+      transition: all 0.5s ease;
+      transform: rotate(270deg);
+   }
+   
+   header .navbar.active{
+      transition: all 0.5s ease;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+   }
+}
+

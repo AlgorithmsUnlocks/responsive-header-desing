@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none!important;
+    border: 0;
+    text-transform: capitalize;
+    
+}
+
+:root{
+    --blue:#335DFF;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg:#eee;
+    --border:.2rem solid rgba(0,0,0,.1);
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+ 
+*::-webkit-scrollbar{
+    height: .2rem;
+    width: 0.7rem;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+ }
+
+ header{
+    padding: 1.5rem 0.5rem;
+    background-color: transparent;
+ }
+ header .navbar a{
+    margin: 0 0.85rem;
+    color: var(--black);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+ }
+ header .navbar a:hover{
+    color: var(--blue);
+    transition: all 0.52s ease;
+ }
+ header .navbar a:active{
+    color: var(--blue);
+ }
+ header .log-reg a{
+    margin: 0 1rem;
+ }
+ header .log-reg .login{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--black);
+ }
+ header .log-reg .register{
+    background: #FD4455;
+    box-shadow: 0px 10px 35px -3px rgba(253, 68, 85, 0.35), 0px 4px 6px rgba(253, 68, 85, 0.25);
+    border-radius: 8px;
+    padding: 15px 40px;
+    color: white;
+ }
+ header #menu-btn{
+    color: var(--black);
+    font-size: 1.5rem;
+    display: none;
+ }
+ @media screen and (max-width: 992px) {
+    header .log-reg{
+        display: none;
+    }
+ }
+ @media screen and (max-width: 768px) {
+    header #menu-btn{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 13%;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        bottom: 0;
+        width: 30%;
+        box-shadow: var(--box-shadow);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+     header .navbar a{
+        margin: 1rem 0;
+     }
+     header #menu-btn.fa-times{
+        transition: all 0.5s ease;
+        transform: rotate(180deg);
+     }
+     header .navbar.active{
+        transition: all 0.5s ease;
+        border-radius: 1rem;
+        background-color: var(--blue);
+        box-shadow: var(--box-shadow);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     }
+     header .navbar.active a{
+        color: white;
+     }
+ }
